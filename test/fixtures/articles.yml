@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: Why Test
+  text: Do you need made automatic test.....
+
+two:
+  title: Why Don't would make automatic test
+  text: I think it is not good idea
