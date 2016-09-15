@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  commenter: It is right man
+  body: Yes We need testing all code because it is good and down of the costs of project
+  article: one
+
+two:
+  commenter:  Oh Man don't tell me this
+  body: If You search about the advantages of tests in development.....
+  article: two

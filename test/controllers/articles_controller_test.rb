@@ -3,6 +3,8 @@ require 'test_helper'
 class ArticlesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @article = articles(:one)
+    @articleTwo = articles(:two)
+    @commentTwo = comments(:two)
   end
 
   teardown do
@@ -35,6 +37,14 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to articles_path
   end
 
+  test "should destroy article Error" do
+    assert_difference('Article.count', -1) do
+      delete article_url(@articleTwo)
+    end
+
+    assert_redirected_to articles_path
+  end
+
   test "should update article" do
     patch article_url(@article), params: { article: { title: "updated" } }
 
@@ -42,5 +52,5 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
     @article.reload
     assert_equal "updated", @article.title
   end
-  
+
 end
