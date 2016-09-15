@@ -5,29 +5,29 @@ class ArticleTest < ActiveSupport::TestCase
     assert true
   end
 
-  test "should not save article without title" do
+  test 'should not save article without title' do
     article = Article.new
     assert_not article.save
   end
 
-  test "should save article and a comment" do
+  test 'should save article and a comment' do
     article = Article.new
-    article.text="text"
-    article.title="title"
+    article.text = 'text'
+    article.title = 'title'
     article.comments.new
     article.comments.first
-    article.comments.first.commenter="teste"
+    article.comments.first.commenter = 'teste'
     article.save
     assert Comment.exists?(article.comments.first.id)
   end
 
-  test "should delete article and a comment" do
+  test 'should delete article and a comment' do
     article = Article.new
-    article.text="text"
-    article.title="title"
+    article.text = 'text'
+    article.title = 'title'
     article.comments.new
     article.comments.first
-    article.comments.first.commenter="teste"
+    article.comments.first.commenter = 'teste'
     article.save
 
     id_comment = article.comments.first.id
@@ -36,8 +36,7 @@ class ArticleTest < ActiveSupport::TestCase
     assert_not Comment.exists?(id_comment)
   end
 
-
-  test "should report error" do
+  test 'should report error' do
     assert_raises(NameError) do
       some_undefined_variable
     end
