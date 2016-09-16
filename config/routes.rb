@@ -3,5 +3,5 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  root 'welcome#index'
+  root 'article#index'
 end
