@@ -53,7 +53,6 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update article' do
     patch article_url(@article), params: { article: { title: 'updated' } }
-
     assert_redirected_to article_path(@article)
     @article.reload
     assert_equal 'updated', @article.title
