@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  http_basic_authenticate_with name: 'dhh', password: 'secret', only: :destroy
+  http_basic_authenticate_with name: 'dhh', password: 'secret', only: :destroy if !Rails.env.test?
   def index
     @articles = Article.all
    end
