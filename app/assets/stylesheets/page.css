@@ -1,0 +1,15 @@
+.navbar-header button {
+    color: #fff
+}
+.fullscreen {
+    width:100%;
+}
+main {
+    padding-top:50px;
+}
+footer {
+    background:#333;
+    color:#fff;
+    padding:20px 0;
+    text-align:center;
+}
