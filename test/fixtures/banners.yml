@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+banner_with_attachment:
+  title: MyString
+  description: MyText
+  period_start: 2016-09-27
+  period_finish: 2016-09-27
+  attachment: 'tapir.jpg'
+  link: MyText
+
+banner_without_attachment:
+  title: MyString
+  description: MyText
+  period_start: 2016-09-27
+  period_finish: 2016-09-27
+  attachment:
+  link: MyText

@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @banners = Banner.all
   end
 
   def help
@@ -7,5 +8,5 @@ class StaticPagesController < ApplicationController
 
   def about
   end
-  
+
 end

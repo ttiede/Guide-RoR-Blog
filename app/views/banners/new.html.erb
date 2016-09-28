@@ -1,0 +1,30 @@
+<h1>Banners#new</h1>
+<p>Find me in app/views/banners/new.html.erb</p>
+
+<% if !@banner.errors.empty? %>
+  <div class="alert alert-error">
+    <ul>
+      <% @banner.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="well">
+  <%= form_for @banner, html: { multipart: true } do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :description %>
+    <%= f.text_area  :description %>
+    <%= f.label :period_start %>
+    <%= f.date_select  :period_start %>
+    <%= f.label :period_finish %>
+    <%= f.date_select  :period_finish %>
+    <%= f.label :link %>
+    <%= f.text_field :link %>
+    <%= f.label :attachment %>
+    <%= f.file_field :attachment %>
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  <% end %>
+</div>
